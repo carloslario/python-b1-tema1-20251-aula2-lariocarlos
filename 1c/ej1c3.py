@@ -16,24 +16,6 @@ Ejemplo:
     Salida:
     7
 
-
-Enunciat:
-
-Implementa una funció anomenada find_max(lst) que trobi el valor màxim en una
-llista de números utilitzant recursió. La funció ha de tornar el valor
-màxim de la llista.
-
-Paràmetres:
-     lst (List): llista de nombres enters o flotants
-
-Exemple:
-     Entrada:
-     numbers_list = [1, 5, 2, 7, 3]
-     fid_max(numbers_list)
-
-     Sortida:
-     7
-
 """
 
 

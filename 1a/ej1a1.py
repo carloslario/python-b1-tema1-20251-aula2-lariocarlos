@@ -17,32 +17,20 @@ Ejemplo:
 
     Salida:
     55
-
-Enunciat:
-Implementa la funció 'fibonacci(fibonacci_number)' que contingui l'algorisme
-de Fibonacci i rebi com a paràmetre un valor numèric enter anomenat
-'fibonacci_number' i torneu el valor de la sèrie Fibonacci en aquesta posició.
-Així mateix, si el valor no és numèric, o és menor a zero, cal llançar
-una excepció ValueError("missatge"), la qual pot incloure un missatge que hi hauria de
-correspondre amb el tipus d'error durant la validació.
-
-Paràmetres:
-- fibonacci_number: Nombre enter positiu superior a 0 que representa la
-posició a la sèrie Fibonacci.
-
-Exemple:
-     Entrada:
-     fibonacci(10)
-
-     Sortida:
-     55
-
 '''
 
 def fibonacci(fibonacci_number):
-    # Write here your code
-    pass
+    if not isinstance(fibonacci_number, int):
+        raise ValueError("Number must be integer.")
+    elif fibonacci_number < 0:
+        raise ValueError("Number must be greater than 0.")
+    else:
+        a, b = 0, 1
+    for i in range(fibonacci_number):
+        a, b = b, a + b
+    return a
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
-# Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(fibonacci(10))
+#este codigo devuelve la operacion de fibonacci de la posicion indicada
+# la cadena de fibonacci consiste en suma 0+1= 1 ; 1+1=2 ; 2+3=5 ; 3+5=8 ; 5+8=13 ; 8+13 = 21  
+print(fibonacci(8))
